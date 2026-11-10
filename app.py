@@ -191,10 +191,10 @@ def loan_page(kind):
 def contact():
     top();hero(t('contact'),t('contact_desc'))
     st.markdown(f'<div class="section">{t("contact_phone")}</div>',unsafe_allow_html=True)
-    number=setting('MATRIX_PUBLIC_PHONE','Not configured')
+    number=setting('MATRIX_PUBLIC_PHONE','6304408484')
     st.write(number)
     st.markdown(f'<div class="section">{t("contact_address")}</div>',unsafe_allow_html=True)
-    st.write(setting('MATRIX_BRANCH_ADDRESS','Not configured'))
+    st.write(setting('MATRIX_BRANCH_ADDRESS','rampachodavaram road,near tana center,Gokavaram,Andhra Pradesh, 533286'))
     loan_type = st.selectbox('రుణ రకం' if st.session_state.lang=='te' else 'Loan type', ['gold','silver','personal','housing','mortgage'], format_func=lambda x: t(x))
     enquiry(loan_type,None)
     st.info(t('disclaimer'));foot()
